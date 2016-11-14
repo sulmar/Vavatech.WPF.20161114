@@ -55,12 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DockPanelView.xaml.cs">
+      <DependentUpon>DockPanelView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StackPanelFormView.xaml.cs">
       <DependentUpon>StackPanelFormView.xaml</DependentUpon>
     </Compile>
     <Compile Include="StackPanelView.xaml.cs">
       <DependentUpon>StackPanelView.xaml</DependentUpon>
     </Compile>
+    <Page Include="DockPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GridFormView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
