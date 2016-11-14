@@ -4,37 +4,54 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vavatech.WPF.WPFClient"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="StackPanelFormView" Height="300" Width="300">
-    <Grid>
 
+    <Window.Resources>
+        <sys:Double x:Key="Width">120</sys:Double>
+        <sys:Double x:Key="Height">30</sys:Double>
+        <SolidColorBrush x:Key="BackgroundButtonBrush">Green</SolidColorBrush>
+    </Window.Resources>
+    
+    <Grid>
         <StackPanel>
 
             <!-- Imię -->
             <StackPanel Orientation="Horizontal">
-                <Label Width="100" Content="Imię"  />
+                <Label 
+                    Width="{StaticResource Width}" 
+                    Height="{StaticResource Height}"
+                    Content="Imię"  />
                 <TextBox Width="200" />
             </StackPanel>
 
             <!-- Nazwisko -->
             <StackPanel Orientation="Horizontal">
-                <Label Width="100" Content="Nazwisko"  />
+                <Label Width="{StaticResource Width}" 
+                       Height="{StaticResource Height}"
+                       Content="Nazwisko"  />
                 <TextBox Width="200" />
             </StackPanel>
 
             <!-- Wiek -->
             <StackPanel Orientation="Horizontal">
-                <Label Width="100" Content="Wiek"  />
+                <Label Width="{StaticResource Width}" 
+                       Height="{StaticResource Height}"
+                       Content="Wiek"  />
                 <TextBox Width="200" />
             </StackPanel>
 
             <!-- Kolor -->
             <StackPanel Orientation="Horizontal">
-                <Label Width="100" Content="Kolor"  />
+                <Label Width="{StaticResource Width}"
+                       Height="{StaticResource Height}"
+                       Content="Kolor"  />
                 <TextBox Width="200" />
             </StackPanel>
 
-            <Button>OK</Button>
+            <Button Background="{StaticResource BackgroundButtonBrush}">OK</Button>
+            <Button Background="{StaticResource BackgroundButtonBrush}">Cancel</Button>
             
         </StackPanel>
         
