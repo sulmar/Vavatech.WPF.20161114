@@ -9,25 +9,29 @@
     <Grid>
 
         <StackPanel>
-        
-            <StackPanel Orientation="Horizontal" Margin="30,20">
-            
-                <!-- Panel lewy -->
-                <StackPanel>
-                    <Label Content="Imię" />
-                    <Label Content="Nazwisko" />
-                    <Label Content="Wiek" />
-                    <Label Content="Kolor" />
-                </StackPanel>
-            
-                <!-- Panel prawy -->
-                <StackPanel Width="200">
-                    <TextBox Margin="5" />
-                    <TextBox Margin="5" />
-                    <TextBox Margin="5" />
-                    <TextBox Margin="5" />
-                </StackPanel>
 
+            <!-- Imię -->
+            <StackPanel Orientation="Horizontal">
+                <Label Width="100" Content="Imię"  />
+                <TextBox Width="200" />
+            </StackPanel>
+
+            <!-- Nazwisko -->
+            <StackPanel Orientation="Horizontal">
+                <Label Width="100" Content="Nazwisko"  />
+                <TextBox Width="200" />
+            </StackPanel>
+
+            <!-- Wiek -->
+            <StackPanel Orientation="Horizontal">
+                <Label Width="100" Content="Wiek"  />
+                <TextBox Width="200" />
+            </StackPanel>
+
+            <!-- Kolor -->
+            <StackPanel Orientation="Horizontal">
+                <Label Width="100" Content="Kolor"  />
+                <TextBox Width="200" />
             </StackPanel>
 
             <Button>OK</Button>
