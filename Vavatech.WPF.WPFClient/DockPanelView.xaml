@@ -6,11 +6,14 @@
         xmlns:local="clr-namespace:Vavatech.WPF.WPFClient"
         mc:Ignorable="d"
         Title="DockPanelView" Height="300" Width="300">
-    <DockPanel>
+    <DockPanel  RenderTransformOrigin="0.5,0.5">
         <Button DockPanel.Dock="Bottom">Button 3</Button>
         <Button DockPanel.Dock="Left" >Button 1</Button>
         <Button DockPanel.Dock="Right">Button 2</Button>
         <Button>Button 4</Button>
-        
+
+        <DockPanel.RenderTransform>
+            <RotateTransform  Angle="90" />
+        </DockPanel.RenderTransform>
     </DockPanel>
 </Window>
