@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Vavatech.WPF.WPFClient"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="StackPanelFormView" Height="300" Width="300">
+        Title="StackPanelFormView" Height="300" Width="700">
 
     <Window.Resources>
         
@@ -17,17 +17,24 @@
 
 
         <!-- Styles -->
-        <Style x:Key="ButtonStyle" TargetType="Button">
+        
+        <Style TargetType="Button">
             <Setter Property="Background" Value="{StaticResource BackgroundButtonBrush}" />
             <Setter Property="Foreground" Value="White" />
-            <Setter Property="Width" Value="200" />
-            <Setter Property="Height" Value="100" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Margin" Value="5" />
         </Style>
 
-        <Style x:Key="LabelStyle" TargetType="Label">
+        <Style TargetType="Label">
             <Setter Property="Width" Value="{StaticResource Width}" />
             <Setter Property="Height" Value="{StaticResource Height}" />
             <Setter Property="Foreground" Value="Blue" />
+        </Style>
+
+
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="200" />
         </Style>
         
     </Window.Resources>
@@ -37,36 +44,34 @@
 
             <!-- Imię -->
             <StackPanel Orientation="Horizontal">
-                <Label 
-                   Style="{StaticResource LabelStyle}"
-                    Content="Imię"  />
-                <TextBox Width="200" />
+                <Label Content="Imię"  />
+                <TextBox/>
             </StackPanel>
 
             <!-- Nazwisko -->
             <StackPanel Orientation="Horizontal">
-                <Label Style="{StaticResource LabelStyle}"
-                       Content="Nazwisko"  />
-                <TextBox Width="200" />
+                <Label Content="Nazwisko"  />
+                <TextBox/>
             </StackPanel>
 
             <!-- Wiek -->
             <StackPanel Orientation="Horizontal">
-                <Label Style="{StaticResource LabelStyle}"
-                       Content="Wiek"  />
-                <TextBox Width="200" />
+                <Label Content="Wiek"  />
+                <TextBox />
             </StackPanel>
 
             <!-- Kolor -->
             <StackPanel Orientation="Horizontal">
-                <Label Style="{StaticResource LabelStyle}"
-                       Content="Kolor"  />
-                <TextBox Width="200" />
+                <Label Content="Kolor"  />
+                <TextBox />
             </StackPanel>
 
-            <Button Style="{StaticResource ButtonStyle}">OK</Button>
-            <Button Style="{StaticResource ButtonStyle}">Cancel</Button>
-            
+            <StackPanel Orientation="Horizontal">
+                <Button>OK</Button>
+                <Button>Cancel</Button>
+                <Button>Send</Button>
+                <Button>Phone</Button>
+            </StackPanel>
         </StackPanel>
         
     </Grid>
