@@ -6,6 +6,6 @@
     <!-- Const -->
     <sys:Double x:Key="Width">120</sys:Double>
     <sys:Double x:Key="Height">30</sys:Double>
-    <SolidColorBrush x:Key="BackgroundButtonBrush">Green</SolidColorBrush>
-    
+    <SolidColorBrush x:Key="BackgroundButtonBrush">Blue</SolidColorBrush>
+
 </ResourceDictionary>

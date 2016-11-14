@@ -35,8 +35,8 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Button>OK</Button>
-                <Button>Cancel</Button>
+                <Button Style="{StaticResource SubmitButtonStyle}">OK</Button>
+                <Button Style="{StaticResource CancelButtonStyle}">Cancel</Button>
                 <Button>Send</Button>
                 <Button>Phone</Button>
             </StackPanel>

@@ -5,12 +5,24 @@
                     >
     <!-- Styles -->
 
-    <Style TargetType="Button">
+    <Style x:Key="BaseButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource BackgroundButtonBrush}" />
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Width" Value="100" />
         <Setter Property="Height" Value="50" />
         <Setter Property="Margin" Value="5" />
+    </Style>
+
+    <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}" />
+
+
+    <Style x:Key="SubmitButtonStyle" BasedOn="{StaticResource BaseButtonStyle}" TargetType="Button">
+        <Setter Property="Background" Value="Green" />
+        <Setter Property="Width" Value="200" />
+    </Style>
+
+    <Style x:Key="CancelButtonStyle" BasedOn="{StaticResource BaseButtonStyle}" TargetType="Button">
+        <Setter Property="Background" Value="Red" />
     </Style>
 
     <Style TargetType="Label">
