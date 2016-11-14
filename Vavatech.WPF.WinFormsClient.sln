@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.WPF.WinFormsClient", "Vavatech.WPF.WinFormsClient\Vavatech.WPF.WinFormsClient.csproj", "{2284FE4A-CC60-4FA6-BC51-85784B5E2558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.WPF.WPFClient", "Vavatech.WPF.WPFClient\Vavatech.WPF.WPFClient.csproj", "{B374CCB7-F491-4CDD-AEFD-41680DE37318}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2284FE4A-CC60-4FA6-BC51-85784B5E2558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2284FE4A-CC60-4FA6-BC51-85784B5E2558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2284FE4A-CC60-4FA6-BC51-85784B5E2558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2284FE4A-CC60-4FA6-BC51-85784B5E2558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B374CCB7-F491-4CDD-AEFD-41680DE37318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B374CCB7-F491-4CDD-AEFD-41680DE37318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B374CCB7-F491-4CDD-AEFD-41680DE37318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B374CCB7-F491-4CDD-AEFD-41680DE37318}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
