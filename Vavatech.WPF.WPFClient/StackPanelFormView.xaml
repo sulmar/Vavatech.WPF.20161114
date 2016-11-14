@@ -4,39 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vavatech.WPF.WPFClient"
-        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="StackPanelFormView" Height="300" Width="700">
 
     <Window.Resources>
-        
-        <!-- Const -->
-        <sys:Double x:Key="Width">120</sys:Double>
-        <sys:Double x:Key="Height">30</sys:Double>
-        <SolidColorBrush x:Key="BackgroundButtonBrush">Green</SolidColorBrush>
-
-
-        <!-- Styles -->
-        
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="{StaticResource BackgroundButtonBrush}" />
-            <Setter Property="Foreground" Value="White" />
-            <Setter Property="Width" Value="100" />
-            <Setter Property="Height" Value="50" />
-            <Setter Property="Margin" Value="5" />
-        </Style>
-
-        <Style TargetType="Label">
-            <Setter Property="Width" Value="{StaticResource Width}" />
-            <Setter Property="Height" Value="{StaticResource Height}" />
-            <Setter Property="Foreground" Value="Blue" />
-        </Style>
-
-
-        <Style TargetType="TextBox">
-            <Setter Property="Width" Value="200" />
-        </Style>
-        
+        <ResourceDictionary Source="Resources\Styles.xaml" />
     </Window.Resources>
     
     <Grid>
