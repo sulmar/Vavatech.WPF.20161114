@@ -39,6 +39,12 @@
                 <Button Style="{StaticResource CancelButtonStyle}">Cancel</Button>
                 <Button>Send</Button>
                 <Button>Phone</Button>
+                <Border Width="100" 
+                        Height="100" 
+                        BorderBrush="Black" 
+                        BorderThickness="1"
+                        CornerRadius="5" 
+                        ></Border>
             </StackPanel>
         </StackPanel>
         
