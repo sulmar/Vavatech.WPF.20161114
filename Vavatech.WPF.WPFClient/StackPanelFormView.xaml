@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:Vavatech.WPF.WPFClient"
         mc:Ignorable="d"
         Title="StackPanelFormView" Height="300" Width="700">
+
+   
     
     <Grid>
         <StackPanel>
@@ -37,8 +39,14 @@
             <StackPanel Orientation="Horizontal">
                 <Button Style="{StaticResource SubmitButtonStyle}">OK</Button>
                 <Button Style="{StaticResource CancelButtonStyle}">Cancel</Button>
-                <Button>Send</Button>
-                <Button>Phone</Button>
+                <Button Template="{StaticResource ButtonTemplate}">Send</Button>
+                <Button Foreground="Green" Template="{StaticResource ButtonTemplate}">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <CheckBox />
+                        <TextBlock Text="Phone" />
+                    </StackPanel>
+                    
+                </Button>
                 <Button>
                     <Grid>
                     <Border Width="80" 
