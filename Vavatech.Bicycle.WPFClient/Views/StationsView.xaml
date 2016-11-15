@@ -21,6 +21,12 @@
 
             <!-- Content -->
             <Grid>
+
+                <ListBox>
+                    <ListBoxItem>Station 1</ListBoxItem>
+                    <ListBoxItem>Station 2</ListBoxItem>
+                    <ListBoxItem>Station 3</ListBoxItem>
+                </ListBox>
                 
             </Grid>
         </DockPanel>
