@@ -58,6 +58,9 @@
     <Compile Include="CanvasView.xaml.cs">
       <DependentUpon>CanvasView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataBindingView.xaml.cs">
+      <DependentUpon>DataBindingView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DockPanelView.xaml.cs">
       <DependentUpon>DockPanelView.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
       <DependentUpon>WrapPanelView.xaml</DependentUpon>
     </Compile>
     <Page Include="CanvasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataBindingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -160,6 +167,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vavatech.Bicycle.Models\Vavatech.Bicycle.Models.csproj">
+      <Project>{6D6D7388-7E22-45C8-BBD9-1DE1D0905F22}</Project>
+      <Name>Vavatech.Bicycle.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
