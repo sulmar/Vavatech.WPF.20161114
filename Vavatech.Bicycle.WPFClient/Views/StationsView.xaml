@@ -18,7 +18,7 @@
             
             <!-- Buttons -->
             <DockPanel DockPanel.Dock="Top">
-                <Button>Add</Button>
+                <Button Command="{Binding AddCommand}">Add</Button>
                 <Button Command="{Binding UpdateCommand}">Edit</Button>
                 <Button>Remove</Button>
                 <Button DockPanel.Dock="Right">Map</Button>

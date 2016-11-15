@@ -32,6 +32,34 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
             Stations = _Service.Get();
         }
 
+        #region AddCommand
+
+        private ICommand _AddCommand;
+
+        public ICommand AddCommand
+        {
+            get
+            {
+                if (_AddCommand==null)
+                {
+                    _AddCommand = new RelayCommand(p => Add());
+                }
+
+                return _AddCommand;
+            }
+        }
+
+        public void Add()
+        {
+            // TODO: Wyświetlić okno do dodawania stacji
+
+            var station = new Station { StationId = 10, Number = "ST 100", Capacity = 20 };
+
+            Stations.Add(station);
+        }
+
+        #endregion
+
         #region UpdateCommand
 
         private ICommand _UpdateCommand;
