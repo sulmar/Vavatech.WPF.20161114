@@ -10,7 +10,21 @@ namespace Vavatech.Bicycle.Models
     {
         public int StationId { get; set; }
 
-        public string Number { get; set; }
+        private string _Number;
+        public string Number
+        {
+            get
+            {
+                return _Number;
+            }
+
+            set
+            {
+                _Number = value;
+
+                OnPropertyChanged("Number");
+            }
+        }
 
         public Location Location { get; set; }
 
