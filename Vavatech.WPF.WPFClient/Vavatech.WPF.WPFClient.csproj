@@ -64,6 +64,9 @@
     <Compile Include="DockPanelView.xaml.cs">
       <DependentUpon>DockPanelView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ElementBindingView.xaml.cs">
+      <DependentUpon>ElementBindingView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StackPanelFormView.xaml.cs">
       <DependentUpon>StackPanelFormView.xaml</DependentUpon>
     </Compile>
@@ -85,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DockPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ElementBindingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
