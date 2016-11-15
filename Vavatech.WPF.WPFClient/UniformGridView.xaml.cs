@@ -23,5 +23,13 @@ namespace Vavatech.WPF.WPFClient
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var button = e.OriginalSource as Button;
+
+            MessageBox.Show($"{button.Content} clicked!");
+
+        }
     }
 }

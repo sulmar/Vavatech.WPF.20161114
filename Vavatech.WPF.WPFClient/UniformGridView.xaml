@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:Vavatech.WPF.WPFClient"
         mc:Ignorable="d"
         Title="UniformGridView" Height="300" Width="300">
-    
-    <UniformGrid Columns="3" Rows="3">
+
+    <UniformGrid Columns="3" Rows="3" 
+                 Button.Click="Button_Click" >
         <Button>1</Button>
         <Button>2</Button>
         <Button>3</Button>
