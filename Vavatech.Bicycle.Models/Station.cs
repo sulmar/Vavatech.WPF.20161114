@@ -17,5 +17,7 @@ namespace Vavatech.Bicycle.Models
         public string Address { get; set; }
 
         public short Capacity { get; set; }
+
+        public override string ToString() => Number;
     }
 }
