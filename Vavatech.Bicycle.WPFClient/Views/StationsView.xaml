@@ -1,0 +1,29 @@
+﻿<Window x:Class="Vavatech.Bicycle.WPFClient.Views.StationsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vavatech.Bicycle.WPFClient.Views"
+        mc:Ignorable="d"
+        Title="StationsView" Height="300" Width="300">
+    <Grid>
+
+        <DockPanel Margin="5">
+            
+            <!-- Buttons -->
+            <DockPanel DockPanel.Dock="Top">
+                <Button>Add</Button>
+                <Button>Edit</Button>
+                <Button>Remove</Button>
+                <Button DockPanel.Dock="Right">Map</Button>
+                <Border />
+            </DockPanel>
+
+            <!-- Content -->
+            <Grid>
+                
+            </Grid>
+        </DockPanel>
+        
+    </Grid>
+</Window>

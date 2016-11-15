@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Vavatech.Bicycle.WPFClient
+namespace Vavatech.Bicycle.WPFClient.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for StationsView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StationsView : Window
     {
-        public MainWindow()
+        public StationsView()
         {
             InitializeComponent();
         }
