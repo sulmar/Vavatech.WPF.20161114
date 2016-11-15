@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vavatech.WPF.WPFClient"
         mc:Ignorable="d"
-        Title="UniformGridView" Height="300" Width="300">
+        Title="UniformGridView" Height="300" Width="300"
+        Button.Click="Window_Click"
+        >
 
     <UniformGrid Columns="3" Rows="3" 
                  Button.Click="Button_Click" >
