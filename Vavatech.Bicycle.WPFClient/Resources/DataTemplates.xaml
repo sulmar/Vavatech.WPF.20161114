@@ -4,9 +4,12 @@
                     xmlns:model="clr-namespace:Vavatech.Bicycle.Models;assembly=Vavatech.Bicycle.Models"
                     >
 
+    <BitmapImage x:Key="BikeImageSource" UriSource="../Assets/Bike.png" />
+    
 
     <DataTemplate DataType="{x:Type model:Station}">
         <StackPanel>
+            <Image Source="{StaticResource BikeImageSource}" />
             <TextBlock Text="{Binding Number}" FontWeight="Bold" />
             <TextBlock Text="{Binding Address}" />
         </StackPanel>
