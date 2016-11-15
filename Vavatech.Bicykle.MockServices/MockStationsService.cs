@@ -68,5 +68,10 @@ namespace Vavatech.Bicykle.MockServices
 
             existsStation = station;
         }
+
+        public void DisplayMap()
+        {
+
+        }
     }
 }

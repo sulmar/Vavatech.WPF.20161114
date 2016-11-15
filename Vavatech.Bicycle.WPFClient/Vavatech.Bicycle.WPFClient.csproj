@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\StationsViewModel.cs" />
     <Compile Include="Views\StationsView.xaml.cs">
       <DependentUpon>StationsView.xaml</DependentUpon>
     </Compile>
@@ -95,9 +97,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Vavatech.Bicycle.Interfaces\Vavatech.Bicycle.Interfaces.csproj">
+      <Project>{353A159D-79DB-436B-B82C-A66EB2154166}</Project>
+      <Name>Vavatech.Bicycle.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vavatech.Bicycle.Models\Vavatech.Bicycle.Models.csproj">
       <Project>{6d6d7388-7e22-45c8-bbd9-1de1d0905f22}</Project>
       <Name>Vavatech.Bicycle.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vavatech.Bicykle.MockServices\Vavatech.Bicykle.MockServices.csproj">
+      <Project>{93A9C1C8-85EF-4E77-A129-BB1F8E721D1F}</Project>
+      <Name>Vavatech.Bicykle.MockServices</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
