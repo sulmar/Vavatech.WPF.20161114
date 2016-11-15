@@ -24,11 +24,6 @@ namespace Vavatech.Bicycle.WPFClient.Views
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var vm = this.DataContext as ViewModels.StationsViewModel;
-
-            vm.SelectedStation.Number = "ST 100";
-        }
+       
     }
 }

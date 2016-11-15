@@ -19,7 +19,7 @@
             <!-- Buttons -->
             <DockPanel DockPanel.Dock="Top">
                 <Button>Add</Button>
-                <Button Click="Button_Click">Edit</Button>
+                <Button Command="{Binding UpdateCommand}">Edit</Button>
                 <Button>Remove</Button>
                 <Button DockPanel.Dock="Right">Map</Button>
                 <Border />
