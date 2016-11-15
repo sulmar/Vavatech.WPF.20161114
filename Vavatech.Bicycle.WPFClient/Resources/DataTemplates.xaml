@@ -1,9 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Vavatech.Bicycle.WPFClient.Resources">
+                    xmlns:local="clr-namespace:Vavatech.Bicycle.WPFClient.Resources"
+                    xmlns:model="clr-namespace:Vavatech.Bicycle.Models;assembly=Vavatech.Bicycle.Models"
+                    >
 
 
-    <DataTemplate x:Key="StationTemplate">
+    <DataTemplate DataType="{x:Type model:Station}">
         <StackPanel>
             <TextBlock Text="{Binding Number}" FontWeight="Bold" />
             <TextBlock Text="{Binding Address}" />

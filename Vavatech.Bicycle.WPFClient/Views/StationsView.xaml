@@ -34,10 +34,7 @@
 
                 <!-- Stations -->
 
-                <ListBox ItemsSource="{Binding Stations}"
-                         ItemTemplate="{StaticResource StationTemplate}">
-                </ListBox>
-
+                <ListBox ItemsSource="{Binding Stations}" />
 
                 <!-- Selected Station Details -->
                 <StackPanel Grid.Column="1" DataContext="{Binding SelectedStation}">
