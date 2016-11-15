@@ -40,9 +40,9 @@
 
                 <!-- Selected Station Details -->
                 <StackPanel Grid.Column="1" DataContext="{Binding SelectedStation}">
-                    <TextBlock Text="{Binding Number}" />
-                    <TextBlock Text="{Binding Address}" />
-                    <TextBlock Text="{Binding Capacity}" />
+                    <TextBox Text="{Binding Number, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox Text="{Binding Capacity}" />
                     <TextBlock Text="{Binding Location}" />
                 </StackPanel>
                 
