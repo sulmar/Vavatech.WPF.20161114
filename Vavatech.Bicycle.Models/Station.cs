@@ -22,7 +22,7 @@ namespace Vavatech.Bicycle.Models
             {
                 _Number = value;
 
-                OnPropertyChanged("Number");
+                OnPropertyChanged();
             }
         }
 
