@@ -34,7 +34,9 @@
 
                 <!-- Stations -->
 
-                <ListBox ItemsSource="{Binding Stations}" />
+                <ListBox ItemsSource="{Binding Stations}"
+                         SelectedItem="{Binding SelectedStation}"
+                         />
 
                 <!-- Selected Station Details -->
                 <StackPanel Grid.Column="1" DataContext="{Binding SelectedStation}">

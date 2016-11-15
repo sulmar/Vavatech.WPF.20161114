@@ -29,7 +29,7 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
 
             Stations = _Service.Get();
 
-            SelectedStation = Stations.FirstOrDefault();
+            SelectedStation = Stations.Last();
         }
     }
 }
