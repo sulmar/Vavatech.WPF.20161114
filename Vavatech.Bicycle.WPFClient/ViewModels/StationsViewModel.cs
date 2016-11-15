@@ -28,6 +28,8 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
             _Service = stationsService;
 
             Stations = _Service.Get();
+
+            SelectedStation = Stations.FirstOrDefault();
         }
     }
 }

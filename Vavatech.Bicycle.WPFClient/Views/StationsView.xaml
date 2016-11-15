@@ -4,8 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vavatech.Bicycle.WPFClient.Views"
+        xmlns:vm="clr-namespace:Vavatech.Bicycle.WPFClient.ViewModels"
         mc:Ignorable="d"
         Title="StationsView" Height="300" Width="300">
+
+    <Window.DataContext>
+        <vm:StationsViewModel />
+    </Window.DataContext>
+    
     <Grid>
 
         <DockPanel Margin="5">
@@ -21,12 +27,25 @@
 
             <!-- Content -->
             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
 
+                <!-- Stations -->
+                
                 <ListBox>
                     <ListBoxItem>Station 1</ListBoxItem>
                     <ListBoxItem>Station 2</ListBoxItem>
                     <ListBoxItem>Station 3</ListBoxItem>
                 </ListBox>
+
+                <!-- Selected Station Details -->
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="{Binding SelectedStation.Number}" />
+                    <TextBlock Text="{Binding SelectedStation.Address}" />
+                    <TextBlock Text="{Binding SelectedStation.Capacity}" />
+                </StackPanel>
                 
             </Grid>
         </DockPanel>
