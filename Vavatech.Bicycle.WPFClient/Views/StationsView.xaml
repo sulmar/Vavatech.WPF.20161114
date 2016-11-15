@@ -42,6 +42,7 @@
                 <StackPanel Grid.Column="1" DataContext="{Binding SelectedStation}">
                     <TextBox Text="{Binding Number, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBox Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" />
+                    <Slider Value="{Binding Capacity}" Minimum="1" Maximum="250" />
                     <TextBox Text="{Binding Capacity}" />
                     <TextBlock Text="{Binding Location}" />
                 </StackPanel>
