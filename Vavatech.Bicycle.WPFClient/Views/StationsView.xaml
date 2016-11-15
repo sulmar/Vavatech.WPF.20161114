@@ -41,10 +41,10 @@
                 </ListBox>
 
                 <!-- Selected Station Details -->
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="{Binding SelectedStation.Number}" />
-                    <TextBlock Text="{Binding SelectedStation.Address}" />
-                    <TextBlock Text="{Binding SelectedStation.Capacity}" />
+                <StackPanel Grid.Column="1" DataContext="{Binding SelectedStation}">
+                    <TextBlock Text="{Binding Number}" />
+                    <TextBlock Text="{Binding Address}" />
+                    <TextBlock Text="{Binding Capacity}" />
                 </StackPanel>
                 
             </Grid>
