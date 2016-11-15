@@ -45,6 +45,7 @@
                     <TextBlock Text="{Binding Number}" />
                     <TextBlock Text="{Binding Address}" />
                     <TextBlock Text="{Binding Capacity}" />
+                    <TextBlock Text="{Binding Location}" />
                 </StackPanel>
                 
             </Grid>
