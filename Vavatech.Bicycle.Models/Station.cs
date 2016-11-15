@@ -10,6 +10,8 @@ namespace Vavatech.Bicycle.Models
     {
         public int StationId { get; set; }
 
+        #region Number
+
         private string _Number;
         public string Number
         {
@@ -26,6 +28,7 @@ namespace Vavatech.Bicycle.Models
             }
         }
 
+        #endregion
         public Location Location { get; set; }
 
         public string Address { get; set; }
