@@ -67,6 +67,9 @@
     <Compile Include="StackPanelView.xaml.cs">
       <DependentUpon>StackPanelView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UniformGridView.xaml.cs">
+      <DependentUpon>UniformGridView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WrapPanelView.xaml.cs">
       <DependentUpon>WrapPanelView.xaml</DependentUpon>
     </Compile>
@@ -119,6 +122,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StackPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UniformGridView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
