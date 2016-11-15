@@ -24,10 +24,6 @@ namespace Vavatech.WPF.WPFClient
         {
             InitializeComponent();
 
-            var user = new User { FirstName = "Marcin", LastName = "Sulecki" };
-
-            this.DataContext = user;
-             
         }
     }
 }

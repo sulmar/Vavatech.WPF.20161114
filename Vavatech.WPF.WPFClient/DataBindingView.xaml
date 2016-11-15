@@ -4,8 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vavatech.WPF.WPFClient"
+        xmlns:model="clr-namespace:Vavatech.Bicycle.Models;assembly=Vavatech.Bicycle.Models"
         mc:Ignorable="d"
         Title="DataBindingView" Height="300" Width="300">
+
+
+    <Window.DataContext>
+        <model:User FirstName="Marcin" LastName="Sulecki" />
+    </Window.DataContext>
+    
     <Grid>
 
 
