@@ -15,10 +15,18 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
 
         public Station SelectedStation { get; set; }
 
-        private IStationsService _Service = new MockStationsService();
+        private IStationsService _Service;
+
 
         public StationsViewModel()
+            : this(new MockStationsService())
         {
+        }
+
+        public StationsViewModel(IStationsService stationsService)
+        {
+            _Service = stationsService;
+
             Stations = _Service.Get();
         }
     }
