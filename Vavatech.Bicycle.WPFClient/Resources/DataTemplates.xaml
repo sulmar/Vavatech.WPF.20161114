@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Vavatech.Bicycle.WPFClient.Resources">
+
+
+    <DataTemplate x:Key="StationTemplate">
+        <StackPanel>
+            <TextBlock Text="{Binding Number}" FontWeight="Bold" />
+            <TextBlock Text="{Binding Address}" />
+        </StackPanel>
+    </DataTemplate>
+    
+    
+</ResourceDictionary>

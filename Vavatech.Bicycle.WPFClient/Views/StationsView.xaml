@@ -34,17 +34,8 @@
 
                 <!-- Stations -->
 
-                <ListBox ItemsSource="{Binding Stations}" >
-
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <TextBlock Text="{Binding Number}" FontWeight="Bold" />
-                                <TextBlock Text="{Binding Address}" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                    
+                <ListBox ItemsSource="{Binding Stations}"
+                         ItemTemplate="{StaticResource StationTemplate}">
                 </ListBox>
 
 
