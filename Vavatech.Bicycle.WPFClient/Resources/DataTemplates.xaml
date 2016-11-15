@@ -8,10 +8,13 @@
     
 
     <DataTemplate DataType="{x:Type model:Station}">
-        <StackPanel>
-            <Image Source="{StaticResource BikeImageSource}" />
-            <TextBlock Text="{Binding Number}" FontWeight="Bold" />
-            <TextBlock Text="{Binding Address}" />
+        <StackPanel Orientation="Horizontal">
+            <Image Width="60" Source="{StaticResource BikeImageSource}" />
+
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{Binding Number}" FontWeight="Bold" />
+                <TextBlock Text="{Binding Address}" />
+            </StackPanel>
         </StackPanel>
     </DataTemplate>
     
