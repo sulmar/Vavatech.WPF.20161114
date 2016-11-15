@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.WPF.WinFormsClient
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.WPF.WPFClient", "Vavatech.WPF.WPFClient\Vavatech.WPF.WPFClient.csproj", "{B374CCB7-F491-4CDD-AEFD-41680DE37318}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.Bicycle.WPFClient", "Vavatech.Bicycle.WPFClient\Vavatech.Bicycle.WPFClient.csproj", "{0E666D02-533C-4B1B-B30D-64D9A1158573}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.Bicycle.Models", "Vavatech.Bicycle.Models\Vavatech.Bicycle.Models.csproj", "{6D6D7388-7E22-45C8-BBD9-1DE1D0905F22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B374CCB7-F491-4CDD-AEFD-41680DE37318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B374CCB7-F491-4CDD-AEFD-41680DE37318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B374CCB7-F491-4CDD-AEFD-41680DE37318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E666D02-533C-4B1B-B30D-64D9A1158573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E666D02-533C-4B1B-B30D-64D9A1158573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E666D02-533C-4B1B-B30D-64D9A1158573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E666D02-533C-4B1B-B30D-64D9A1158573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6D7388-7E22-45C8-BBD9-1DE1D0905F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6D7388-7E22-45C8-BBD9-1DE1D0905F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6D7388-7E22-45C8-BBD9-1DE1D0905F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6D7388-7E22-45C8-BBD9-1DE1D0905F22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
