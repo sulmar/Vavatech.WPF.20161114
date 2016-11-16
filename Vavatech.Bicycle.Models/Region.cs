@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,8 @@ namespace Vavatech.Bicycle.Models
 
         #region Stations
 
-        private IList<Station> _Stations;
-        public IList<Station> Stations
+        private ObservableCollection<Station> _Stations;
+        public ObservableCollection<Station> Stations
         {
             get
             {
