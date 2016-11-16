@@ -20,7 +20,8 @@
             <DockPanel DockPanel.Dock="Top">
                 <Button Command="{Binding AddCommand}">Add</Button>
                 <Button Command="{Binding UpdateCommand}">Edit</Button>
-                <Button>Remove</Button>
+                <Button Command="{Binding RemoveCommand}">Remove</Button>
+                
                 <Button Command="{Binding ViewUsersCommand}" DockPanel.Dock="Right">Users</Button>
                 <Button Command="{Binding ViewBikesCommand}" DockPanel.Dock="Right">Bikes</Button>
                 <Button DockPanel.Dock="Right">Map</Button>
@@ -48,7 +49,7 @@
 
                     <!-- Stations -->
 
-                    <ListBox ItemsSource="{Binding Stations}"
+                    <ListBox ItemsSource="{Binding SelectedRegion.Stations}"
                              SelectedItem="{Binding SelectedStation}"
                              />
 

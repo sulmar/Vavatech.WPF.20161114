@@ -15,8 +15,6 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
     {
         public Region SelectedRegion { get; set; }
 
-        public IList<Station> Stations { get; set; }
-
         public Station SelectedStation { get; set; }
 
         private IStationsService _Service;
@@ -35,7 +33,6 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
 
             SelectedRegion = _RegionService.Get(1);
 
-            Stations = SelectedRegion.Stations;
         }
 
 
@@ -112,7 +109,7 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
 
             var station = new Station { StationId = 10, Number = "ST 100", Capacity = 20 };
 
-            Stations.Add(station);
+            SelectedRegion.Stations.Add(station);
         }
 
         #endregion
@@ -143,6 +140,33 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
         {
             return SelectedStation!=null && SelectedStation.Capacity > 14;
         }
+
+        #endregion
+
+
+        #region RemoveCommand
+
+        private ICommand _RemoveCommand;
+
+        public ICommand RemoveCommand
+        {
+            get
+            {
+                if (_RemoveCommand == null)
+                {
+                    _RemoveCommand = new RelayCommand(p=>Remove(), p => CanRemove);
+                }
+
+                return _RemoveCommand;
+            }
+        }
+
+        private void Remove()
+        {
+            SelectedRegion.Stations.Remove(SelectedStation);
+        }
+
+        private bool CanRemove => SelectedStation != null;
 
         #endregion
     }
