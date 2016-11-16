@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vavatech.Bicycle.WPFClient.Views"
         xmlns:vm="clr-namespace:Vavatech.Bicycle.WPFClient.ViewModels"
+        xmlns:b="clr-namespace:Vavatech.Bicycle.WPFClient.Behaviors"
+        xmlns:e="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
         Title="StationsView" Height="300" Width="600">
 
@@ -24,7 +26,11 @@
                 
                 <Button Command="{Binding ViewUsersCommand}" DockPanel.Dock="Right">Users</Button>
                 <Button Command="{Binding ViewBikesCommand}" DockPanel.Dock="Right">Bikes</Button>
-                <Button DockPanel.Dock="Right">Map</Button>
+                <Button DockPanel.Dock="Right" Content="Map">
+                    <e:Interaction.Behaviors>
+                        <b:ButtonBehavior />
+                    </e:Interaction.Behaviors>
+                </Button>
                 <Border />
             </DockPanel>
 
