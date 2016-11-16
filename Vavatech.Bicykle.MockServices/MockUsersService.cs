@@ -31,6 +31,11 @@ namespace Vavatech.Bicykle.MockServices
             return _Users.Single(u => u.UserId == itemId);
         }
 
+        public Task<IList<User>> GetAsync()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(int itemId)
         {
             throw new NotImplementedException();

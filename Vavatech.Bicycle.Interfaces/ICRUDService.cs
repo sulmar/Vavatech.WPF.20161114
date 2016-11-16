@@ -10,6 +10,8 @@ namespace Vavatech.Bicycle.Interfaces
     {
         IList<TItem> Get();
 
+        Task<IList<TItem>> GetAsync();
+
         TItem Get(int itemId);
 
         void Add(TItem item);

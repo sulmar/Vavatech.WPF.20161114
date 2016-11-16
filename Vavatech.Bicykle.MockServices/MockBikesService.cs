@@ -22,6 +22,11 @@ namespace Vavatech.Bicykle.MockServices
             _Bikes.Add(item);
         }
 
+        public Task AddAsync(Bike item)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<Bike> Get()
         {
             return _Bikes;
@@ -32,6 +37,16 @@ namespace Vavatech.Bicykle.MockServices
             return _Bikes.Single(b => b.BikeId == itemId);
         }
 
+        public Task<IList<Bike>> GetAsync()
+        {
+            return Task.Run(() => Get());
+        }
+
+        public Task<Bike> GetAsync(int itemId)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(int itemId)
         {
             var bike = Get(itemId);
@@ -39,11 +54,21 @@ namespace Vavatech.Bicykle.MockServices
             _Bikes.Remove(bike);
         }
 
+        public Task RemoveAsync(Bike item)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Bike item)
         {
             var existsBike = Get(item.BikeId);
 
             existsBike = item;
+        }
+
+        public Task UpdateAsync(Bike item)
+        {
+            throw new NotImplementedException();
         }
     }
 }

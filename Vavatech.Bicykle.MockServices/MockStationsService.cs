@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Vavatech.Bicycle.Interfaces;
 using Vavatech.Bicycle.Models;
 
@@ -72,6 +73,11 @@ namespace Vavatech.Bicykle.MockServices
         public void DisplayMap()
         {
 
+        }
+
+        public Task<IList<Station>> GetAsync()
+        {
+            return Task.Run(() => Get());
         }
     }
 }

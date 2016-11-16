@@ -37,6 +37,11 @@ namespace Vavatech.Bicykle.MockServices
             return _Regions.Single(r => r.RegionId == itemId);
         }
 
+        public Task<IList<Region>> GetAsync()
+        {
+            return Task.Run(() => Get());
+        }
+
         public void Remove(int itemId)
         {
             throw new NotImplementedException();
