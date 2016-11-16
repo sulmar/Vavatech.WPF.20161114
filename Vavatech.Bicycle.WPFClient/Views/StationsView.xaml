@@ -28,7 +28,7 @@
                 <Button Command="{Binding ViewBikesCommand}" DockPanel.Dock="Right">Bikes</Button>
                 <Button DockPanel.Dock="Right" Content="Map">
                     <e:Interaction.Behaviors>
-                        <b:ButtonBehavior />
+                        <b:ButtonBehavior Color="Blue" />
                     </e:Interaction.Behaviors>
                 </Button>
                 <Border />

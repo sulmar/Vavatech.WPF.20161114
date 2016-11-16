@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interactivity;
 using System.Windows.Media;
@@ -11,6 +12,18 @@ namespace Vavatech.Bicycle.WPFClient.Behaviors
 {
     public class ButtonBehavior : Behavior<Button>
     {
+        public string Color
+        {
+            get { return (string)GetValue(ColorProperty); }
+            set { SetValue(ColorProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Color.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ColorProperty =
+            DependencyProperty.Register("Color", typeof(string), typeof(ButtonBehavior), new PropertyMetadata("Red"));
+
+
+
         protected override void OnAttached()
         {
             var button = this.AssociatedObject;
@@ -22,7 +35,9 @@ namespace Vavatech.Bicycle.WPFClient.Behaviors
         {
             var button = sender as Button;
 
-            button.Background = new SolidColorBrush(Colors.Red);
+            var color = (Color) ColorConverter.ConvertFromString(this.Color);
+
+            button.Background = new SolidColorBrush(color);
         }
 
     }
