@@ -13,23 +13,29 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
 {
     public class StationsViewModel : BaseViewModel
     {
+        public Region SelectedRegion { get; set; }
+
         public IList<Station> Stations { get; set; }
 
         public Station SelectedStation { get; set; }
 
         private IStationsService _Service;
-
+        private IRegionsService _RegionService;
 
         public StationsViewModel()
-            : this(new MockStationsService())
+            : this(new MockRegionsService(new MockStationsService()))
         {
+
         }
+     
 
-        public StationsViewModel(IStationsService stationsService)
+        public StationsViewModel(IRegionsService regionsService)
         {
-            _Service = stationsService;
+            _RegionService = regionsService;
 
-            Stations = _Service.Get();
+            SelectedRegion = _RegionService.Get(1);
+
+            Stations = SelectedRegion.Stations;
         }
 
 
