@@ -60,8 +60,10 @@
 
                     <!-- Stations -->
 
-                    <ListBox ItemsSource="{Binding SelectedRegion.Stations}"
+                    <ListBox Height="600" 
+                             ItemsSource="{Binding SelectedRegion.Stations}"
                              SelectedItem="{Binding SelectedStation}"
+                             ScrollViewer.VerticalScrollBarVisibility="Visible"
                              />
 
                     <!-- Selected Station Details -->
