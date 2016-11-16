@@ -15,6 +15,7 @@
                 <TextBlock Text="{Binding Number}" FontWeight="Bold" />
                 <TextBlock Text="{Binding Address}" />
                 <TextBlock Text="{Binding FullName}" />
+                <TextBlock Text="{Binding Capacity}" />
             </StackPanel>
         </StackPanel>
     </DataTemplate>

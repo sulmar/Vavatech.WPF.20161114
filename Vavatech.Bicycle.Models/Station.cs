@@ -34,7 +34,26 @@ namespace Vavatech.Bicycle.Models
 
         public string Address { get; set; }
 
-        public short Capacity { get; set; }
+        #region Capacity
+
+        private short _Capacity;
+        public short Capacity
+        {
+            get
+            {
+                return _Capacity;
+            }
+
+            set
+            {
+                _Capacity = value;
+
+                OnPropertyChanged();
+
+            }
+        }
+
+        #endregion
 
         public string FullName => $"{Number} - {Address}";
 
