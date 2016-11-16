@@ -28,6 +28,15 @@
             </StackPanel>
         </StackPanel>
     </DataTemplate>
-    
-    
+
+
+    <DataTemplate DataType="{x:Type model:User}">
+        <StackPanel Orientation="Horizontal">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{Binding FullName}" FontWeight="Bold" />
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+
 </ResourceDictionary>
