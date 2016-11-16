@@ -25,6 +25,7 @@ namespace Vavatech.Bicycle.Models
                 _Number = value;
 
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(FullName));
             }
         }
 
@@ -34,6 +35,8 @@ namespace Vavatech.Bicycle.Models
         public string Address { get; set; }
 
         public short Capacity { get; set; }
+
+        public string FullName => $"{Number} - {Address}";
 
         public override string ToString() => Number;
     }
