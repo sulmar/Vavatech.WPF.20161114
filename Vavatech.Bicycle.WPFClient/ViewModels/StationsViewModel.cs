@@ -61,15 +61,16 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
         private IRegionsService _RegionService;
 
         public StationsViewModel()
-            : this(new MockRegionsService(new MockStationsService()))
+            : this(new MockRegionsService(new XmlStationsService()), new XmlStationsService())
         {
 
         }
      
 
-        public StationsViewModel(IRegionsService regionsService)
+        public StationsViewModel(IRegionsService regionsService, IStationsService stationsService)
         {
             _RegionService = regionsService;
+            _Service = stationsService;
         }
 
 
@@ -83,7 +84,7 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
             {
                 if (_LoadCommand == null)
                 {
-                    _LoadCommand = new RelayCommand(p => LoadAsync());
+                    _LoadCommand = new RelayCommand(async p => await LoadAsync());
                 }
 
                 return _LoadCommand;
@@ -92,12 +93,16 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
 
         private void Load()
         {
-            SelectedRegion = _RegionService.Get(1);
+           
         }
 
         private async Task LoadAsync()
         {
-            await Task.Run(() => Load());
+            SelectedRegion = _RegionService.Get(1);
+
+            var stations = await _Service.GetAsync();
+
+            SelectedRegion.Stations = new ObservableCollection<Station>(stations);
         }
 
 

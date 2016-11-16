@@ -35,6 +35,7 @@ namespace Vavatech.Bicycle.Models
 
         private void OnStationsChanged()
         {
+
             // Podpinamy się pod obiekty stacji
             foreach (var station in _Stations)
             {
@@ -52,6 +53,6 @@ namespace Vavatech.Bicycle.Models
 
         #endregion
 
-        public int Capacity => Stations.Sum(s => s.Capacity);
+        public int? Capacity => Stations?.Sum(s => s.Capacity);
     }
 }

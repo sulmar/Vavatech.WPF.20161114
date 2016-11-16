@@ -19,7 +19,7 @@ namespace Vavatech.Bicykle.MockServices
         public MockRegionsService(IStationsService stationsService)
         {
             
-            _Regions.First().Stations = new ObservableCollection<Station>(stationsService.Get());
+           // _Regions.First().Stations = new ObservableCollection<Station>(stationsService.Get());
         }
 
         public void Add(Region item)
