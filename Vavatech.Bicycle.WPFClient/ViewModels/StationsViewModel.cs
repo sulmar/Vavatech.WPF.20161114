@@ -14,9 +14,47 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
 {
     public class StationsViewModel : BaseViewModel
     {
-        public Region SelectedRegion { get; set; }
 
-        public Station SelectedStation { get; set; }
+        #region SelectedRegion
+
+        private Region _SelectedRegion;
+        public Region SelectedRegion
+        {
+            get
+            {
+                return _SelectedRegion;
+            }
+
+            set
+            {
+                _SelectedRegion = value;
+
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion
+
+        #region SelectedStation
+
+        private Station _SelectedStation;
+        public Station SelectedStation
+        {
+            get
+            {
+                return _SelectedStation;
+            }
+
+            set
+            {
+                _SelectedStation = value;
+
+                OnPropertyChanged();
+            }
+        }
+
+        #endregion
+
 
         private IStationsService _Service;
         private IRegionsService _RegionService;
@@ -31,10 +69,33 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
         public StationsViewModel(IRegionsService regionsService)
         {
             _RegionService = regionsService;
-
-            SelectedRegion = _RegionService.Get(1);
-
         }
+
+
+        #region LoadCommand
+
+        private ICommand _LoadCommand;
+
+        public ICommand LoadCommand
+        {
+            get
+            {
+                if (_LoadCommand == null)
+                {
+                    _LoadCommand = new RelayCommand(p => Load());
+                }
+
+                return _LoadCommand;
+            }
+        }
+
+        private void Load()
+        {
+            SelectedRegion = _RegionService.Get(1);
+        }
+
+
+        #endregion
 
 
         #region

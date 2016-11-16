@@ -8,7 +8,7 @@
         xmlns:b="clr-namespace:Vavatech.Bicycle.WPFClient.Behaviors"
         xmlns:e="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:m="clr-namespace:Vavatech.Bicycle.WPFClient.MarkupExtensions"
-        Loaded="{m:EventToCommand ViewUsersCommand}"
+        Loaded="{m:EventToCommand LoadCommand}"
         mc:Ignorable="d"
         Title="StationsView" Height="300" Width="600">
 
