@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Vavatech.Bicycle.Interfaces;
@@ -82,7 +83,7 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
             {
                 if (_LoadCommand == null)
                 {
-                    _LoadCommand = new RelayCommand(p => Load());
+                    _LoadCommand = new RelayCommand(p => LoadAsync());
                 }
 
                 return _LoadCommand;
@@ -94,9 +95,71 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
             SelectedRegion = _RegionService.Get(1);
         }
 
+        private async Task LoadAsync()
+        {
+            await Task.Run(() => Load());
+        }
+
 
         #endregion
 
+
+        #region CalculateCommand
+
+        private ICommand _CalculateCommand;
+
+        public ICommand CalculateCommand
+        {
+            get
+            {
+                if (_CalculateCommand == null)
+                {
+                    _CalculateCommand = new RelayCommand(p => CalculateAsync());
+                }
+
+                return _CalculateCommand;
+            }
+        }
+
+        private void Calculate()
+        {
+            var netto = CalculateNetto(100);
+
+            var brutto = CalculateBrutto(netto);
+        }
+
+        private async Task CalculateAsync()
+        {
+            var netto = await CalculateNettoAsync(100);
+
+            var brutto = await CalculateBruttoAsync(netto);
+        }
+
+        private Task<decimal> CalculateNettoAsync(decimal amount)
+        {
+            return Task.Run(() => CalculateNetto(amount));
+        }
+
+        private decimal CalculateNetto(decimal amount)
+        {
+            Thread.Sleep(5000);
+
+            return amount * 10;
+        }
+
+        private Task<decimal> CalculateBruttoAsync(decimal amount)
+        {
+            return Task.Run(() => CalculateBrutto(amount));
+        }
+
+        private decimal CalculateBrutto(decimal amount)
+        {
+            Thread.Sleep(5000);
+
+            return amount * 1.23m;
+        }
+
+        #endregion
 
         #region
 
