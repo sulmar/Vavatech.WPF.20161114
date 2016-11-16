@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Interactivity;
 using System.Windows.Media;
 
@@ -24,6 +25,21 @@ namespace Vavatech.Bicycle.WPFClient.Behaviors
 
 
 
+
+
+        public ICommand Command
+        {
+            get { return (ICommand)GetValue(CommandProperty); }
+            set { SetValue(CommandProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Command.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CommandProperty =
+            DependencyProperty.Register("Command", typeof(ICommand), typeof(ButtonBehavior), new PropertyMetadata(null));
+
+
+
+
         protected override void OnAttached()
         {
             var button = this.AssociatedObject;
@@ -38,6 +54,11 @@ namespace Vavatech.Bicycle.WPFClient.Behaviors
             var color = (Color) ColorConverter.ConvertFromString(this.Color);
 
             button.Background = new SolidColorBrush(color);
+
+            if (Command.CanExecute(null))
+            {
+                Command.Execute(null);
+            }
         }
 
     }
