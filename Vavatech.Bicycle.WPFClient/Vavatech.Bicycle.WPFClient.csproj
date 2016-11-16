@@ -65,6 +65,7 @@
     </ApplicationDefinition>
     <Compile Include="Behaviors\ButtonBehavior.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="MarkupExtensions\CurrentDate.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BikesViewModel.cs" />
     <Compile Include="ViewModels\ItemsViewModel.cs" />

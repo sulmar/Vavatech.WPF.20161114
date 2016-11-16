@@ -7,6 +7,7 @@
         xmlns:vm="clr-namespace:Vavatech.Bicycle.WPFClient.ViewModels"
         xmlns:b="clr-namespace:Vavatech.Bicycle.WPFClient.Behaviors"
         xmlns:e="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:m="clr-namespace:Vavatech.Bicycle.WPFClient.MarkupExtensions"
         mc:Ignorable="d"
         Title="StationsView" Height="300" Width="600">
 
@@ -26,7 +27,7 @@
                 
                 <Button Command="{Binding ViewUsersCommand}" DockPanel.Dock="Right">Users</Button>
                 <Button Command="{Binding ViewBikesCommand}" DockPanel.Dock="Right">Bikes</Button>
-                <Button DockPanel.Dock="Right" Content="Map">
+                <Button DockPanel.Dock="Right" Content="Map" >
                     <e:Interaction.Behaviors>
                         <b:ButtonBehavior Color="Blue" Command="{Binding ViewUsersCommand}" />
                     </e:Interaction.Behaviors>
@@ -37,6 +38,8 @@
             <!-- Content -->
 
             <StackPanel>
+
+                <TextBlock Text="{m:CurrentDate}" />
 
                 <!-- Region -->
                 <StackPanel>
