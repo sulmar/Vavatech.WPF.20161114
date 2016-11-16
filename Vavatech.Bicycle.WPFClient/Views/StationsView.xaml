@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Vavatech.Bicycle.WPFClient.Views"
         xmlns:vm="clr-namespace:Vavatech.Bicycle.WPFClient.ViewModels"
         mc:Ignorable="d"
-        Title="StationsView" Height="300" Width="300">
+        Title="StationsView" Height="300" Width="600">
 
     <Window.DataContext>
         <vm:StationsViewModel />
@@ -21,6 +21,7 @@
                 <Button Command="{Binding AddCommand}">Add</Button>
                 <Button Command="{Binding UpdateCommand}">Edit</Button>
                 <Button>Remove</Button>
+                <Button Command="{Binding ViewBikesCommand}" DockPanel.Dock="Right">Bikes</Button>
                 <Button DockPanel.Dock="Right">Map</Button>
                 <Border />
             </DockPanel>

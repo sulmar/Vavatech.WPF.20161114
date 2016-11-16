@@ -17,6 +17,17 @@
             </StackPanel>
         </StackPanel>
     </DataTemplate>
+
+    <DataTemplate DataType="{x:Type model:Bike}">
+        <StackPanel Orientation="Horizontal">
+            <Image Width="60" Source="{StaticResource BikeImageSource}" />
+
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{Binding SerialNumber}" FontWeight="Bold" />
+                <TextBlock Text="{Binding State}" />
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
     
     
 </ResourceDictionary>

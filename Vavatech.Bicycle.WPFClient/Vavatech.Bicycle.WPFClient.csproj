@@ -57,7 +57,11 @@
     </ApplicationDefinition>
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BikesViewModel.cs" />
     <Compile Include="ViewModels\StationsViewModel.cs" />
+    <Compile Include="Views\BikesView.xaml.cs">
+      <DependentUpon>BikesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StationsView.xaml.cs">
       <DependentUpon>StationsView.xaml</DependentUpon>
     </Compile>
@@ -70,6 +74,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BikesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

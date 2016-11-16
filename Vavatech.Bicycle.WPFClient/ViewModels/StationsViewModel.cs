@@ -32,6 +32,31 @@ namespace Vavatech.Bicycle.WPFClient.ViewModels
             Stations = _Service.Get();
         }
 
+        #region
+
+        private ICommand _ViewBikesCommand;
+
+        public ICommand ViewBikesCommand
+        {
+            get
+            {
+                if (_ViewBikesCommand == null)
+                {
+                    _ViewBikesCommand = new RelayCommand(p => ViewBikes());
+                }
+
+                return _ViewBikesCommand;
+            }
+        }
+
+        public void ViewBikes()
+        {
+            var bikesView = new Views.BikesView();
+            bikesView.ShowDialog();
+        }
+
+        #endregion
+
         #region AddCommand
 
         private ICommand _AddCommand;
